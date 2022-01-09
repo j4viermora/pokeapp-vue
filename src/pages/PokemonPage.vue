@@ -10,8 +10,10 @@
             :pokemons="pokemonsArr" 
             @selection="checkAnswer"
             />
-        <h2 v-if="showMessage">{{message}}</h2>
-        <button @click="newGame">New game</button>
+        <template v-if="showMessage">
+            <h2 >{{message}}</h2>
+            <button @click="newGame">New game</button>
+        </template>
     </div>
 </template>
 
